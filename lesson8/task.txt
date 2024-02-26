@@ -1,0 +1,85 @@
+2)
+
+using System;
+using System.CodeDom;
+using System.Collections;
+using System.Collections.Generic;
+using System.Linq;
+using System.Net;
+using System.Runtime.InteropServices;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace p121b
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            Queue<string> list = new Queue<string>();
+            list.Enqueue("Message 1");
+            list.Enqueue("Message 2");
+            list.Enqueue("Message 3");
+            list.Enqueue("Message 4");
+            list.Enqueue("Message 5");
+            list.Enqueue("Message 6");
+            list.Enqueue("Message 7");
+            list.Enqueue("Message 8");
+            list.Enqueue("Message 9");
+            list.Enqueue("Message 10");
+            list.Enqueue("Message 11");
+            if (list.Count > 10) 
+            {
+                list.Dequeue();
+                list.Enqueue("Message12");
+            }
+            foreach(var message  in list)
+            {
+                Console.WriteLine(message);
+            }
+        }
+    }
+}
+
+3)
+
+using System;
+using System.CodeDom;
+using System.Collections.Generic;
+using System.Linq;
+using System.Net;
+using System.Runtime.InteropServices;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace p121b
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            List<int> list = new List<int>();
+            list.Add(1);
+            list.Add(2);
+            list.Add(3);
+            list.Add(4);
+            list.Add(5);
+            list.Add(6);
+            list.Add(7);
+            list.Add(8);
+            list.Add(9);
+            list.Add(10);
+
+            for (int i =0; i<5; i++)
+            {
+                int num = list[i];
+                list[i] = list[list.Count - 5 + i];
+                list[list.Count - 5 +i] = num;
+            }
+            foreach(int num in list)
+            {
+                Console.WriteLine(num);
+            }
+        }
+    }
+}

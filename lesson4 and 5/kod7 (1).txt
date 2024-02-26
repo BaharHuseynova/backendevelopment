@@ -1,0 +1,34 @@
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Diagnostics.Eventing.Reader;
+using System.Linq;
+using System.Runtime.ExceptionServices;
+using System.Runtime.InteropServices.ComTypes;
+using System.Text;
+using System.Threading;
+using System.Threading.Tasks;
+using System.Xml.Linq;
+using System.Xml.Schema;
+
+namespace p121
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            int[] numArr = { 4, 5, 2, 1, 5, 2, 5, 3, 5, 6, 2, 1, 6, 2, 6, 2, 5, 3, 2, 7, 4, 6, 4, 5, 6, 2, 5, 6, 3, 7, 3, 7 };
+            int max = 0;
+            int index = 0;
+            for (int i = 0; i < numArr.Length; i++)
+            {
+                if (numArr[i] > max)
+                {
+                    max = numArr[i];
+                    index = i;
+                }
+            }
+            Console.WriteLine($"indexi {index} en boyuk olan eded {max}");
+        }
+    }
+}

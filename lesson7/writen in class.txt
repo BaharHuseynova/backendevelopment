@@ -1,0 +1,374 @@
+1)arraylist method
+using System;
+using System.CodeDom;
+using System.Collections;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Diagnostics.Eventing.Reader;
+using System.Linq;
+using System.Runtime.ExceptionServices;
+using System.Runtime.InteropServices.ComTypes;
+using System.Text;
+using System.Threading;
+using System.Threading.Tasks;
+using System.Xml.Linq;
+using System.Xml.Schema;
+
+namespace p121
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            ArrayList arraylist = new ArrayList();
+            arraylist.Add(15);
+
+            arraylist.Add(5);
+
+            arraylist.Add(95);
+
+            arraylist.Add("Bahar");
+
+
+            foreach (dynamic item in arraylist)
+            {
+                Console.WriteLine(item);
+            }
+        }
+    }
+}
+1.1)arraylist remove method
+using System;
+using System.CodeDom;
+using System.Collections;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Diagnostics.Eventing.Reader;
+using System.Linq;
+using System.Runtime.ExceptionServices;
+using System.Runtime.InteropServices.ComTypes;
+using System.Text;
+using System.Threading;
+using System.Threading.Tasks;
+using System.Xml.Linq;
+using System.Xml.Schema;
+
+namespace p121
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            ArrayList arraylist = new ArrayList();
+            arraylist.Add(15);
+
+            arraylist.Add(5);
+
+            arraylist.Add(95);
+
+            arraylist.Add("Bahar");
+
+            arraylist.Remove(15);
+
+            arraylist.RemoveRange(0, arraylist.Count); 
+
+
+
+            foreach (dynamic item in arraylist)
+            {
+                Console.WriteLine(item);
+            }
+        }
+    }
+}
+2)sortedlist method
+using System;
+using System.CodeDom;
+using System.Collections;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Diagnostics.Eventing.Reader;
+using System.Linq;
+using System.Runtime.ExceptionServices;
+using System.Runtime.InteropServices.ComTypes;
+using System.Text;
+using System.Threading;
+using System.Threading.Tasks;
+using System.Xml.Linq;
+using System.Xml.Schema;
+
+namespace p121
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            SortedList sortedlist = new SortedList();
+            sortedlist.Add("Anar", "Bahar");
+            sortedlist.Add("Necef", 6);
+            sortedlist.Add("Leyla", "Cefer");
+            sortedlist.Add("Bade", 2);
+           
+
+            foreach (dynamic item in sortedlist)
+            {
+                Console.WriteLine(item.Key + " " + item.Value);
+            }
+        }
+    }
+}
+2.1)sortedlist remove method
+using System;
+using System.CodeDom;
+using System.Collections;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Diagnostics.Eventing.Reader;
+using System.Linq;
+using System.Runtime.ExceptionServices;
+using System.Runtime.InteropServices.ComTypes;
+using System.Text;
+using System.Threading;
+using System.Threading.Tasks;
+using System.Xml.Linq;
+using System.Xml.Schema;
+
+namespace p121
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            SortedList sortedlist = new SortedList();
+            sortedlist.Add("Anar", "Bahar");
+            sortedlist.Add("Necef", 6);
+            sortedlist.Add("Leyla", "Cefer");
+            sortedlist.Add("Bade", 2);
+            sortedlist.Clear();
+
+            foreach (dynamic item in sortedlist)
+            {
+                Console.WriteLine(item.Key + " " + item.Value);
+            }
+        }
+    }
+}
+3)stack method
+using System;
+using System.CodeDom;
+using System.Collections;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Diagnostics.Eventing.Reader;
+using System.Linq;
+using System.Runtime.ExceptionServices;
+using System.Runtime.InteropServices.ComTypes;
+using System.Text;
+using System.Threading;
+using System.Threading.Tasks;
+using System.Xml.Linq;
+using System.Xml.Schema;
+
+namespace p121
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            Stack stack = new Stack();
+            stack.Push(29);
+            stack.Push("Bahar");
+            stack.Push(92);
+
+
+            foreach (dynamic item in stack)
+            {
+                Console.WriteLine(item);
+            }
+        }
+    }
+}
+3.1) stack remove method
+using System;
+using System.CodeDom;
+using System.Collections;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Diagnostics.Eventing.Reader;
+using System.Linq;
+using System.Runtime.ExceptionServices;
+using System.Runtime.InteropServices.ComTypes;
+using System.Text;
+using System.Threading;
+using System.Threading.Tasks;
+using System.Xml.Linq;
+using System.Xml.Schema;
+
+namespace p121
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            Stack stack = new Stack();
+            stack.Push(29);
+            stack.Push("Bahar");
+            stack.Push(92);
+            stack.Pop();
+
+
+
+            foreach (dynamic item in stack)
+            {
+                Console.WriteLine(item);
+            }
+        }
+    }
+}
+4)queue method
+using System;
+using System.CodeDom;
+using System.Collections;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Diagnostics.Eventing.Reader;
+using System.Linq;
+using System.Runtime.ExceptionServices;
+using System.Runtime.InteropServices.ComTypes;
+using System.Text;
+using System.Threading;
+using System.Threading.Tasks;
+using System.Xml.Linq;
+using System.Xml.Schema;
+
+namespace p121
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            Queue queue = new Queue();
+            queue.Enqueue("Bahar");
+            queue.Enqueue("Coshgun");
+            queue.Enqueue(17);
+            foreach(var item in queue)
+            {
+                Console.WriteLine(item);
+            }
+            
+        }
+    }
+}
+4.1) queue remove method
+using System;
+using System.CodeDom;
+using System.Collections;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Diagnostics.Eventing.Reader;
+using System.Linq;
+using System.Runtime.ExceptionServices;
+using System.Runtime.InteropServices.ComTypes;
+using System.Text;
+using System.Threading;
+using System.Threading.Tasks;
+using System.Xml.Linq;
+using System.Xml.Schema;
+
+namespace p121
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            Queue queue = new Queue();
+            queue.Enqueue("Bahar");
+            queue.Enqueue("Coshgun");
+            queue.Enqueue(17);
+            queue.Dequeue();
+            queue.Dequeue();
+            foreach(var item in queue)
+            {
+                Console.WriteLine(item);
+            }
+            
+        }
+    }
+}
+5)hashtable method
+using System;
+using System.CodeDom;
+using System.Collections;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Diagnostics.Eventing.Reader;
+using System.Linq;
+using System.Runtime.ExceptionServices;
+using System.Runtime.InteropServices.ComTypes;
+using System.Text;
+using System.Threading;
+using System.Threading.Tasks;
+using System.Xml.Linq;
+using System.Xml.Schema;
+
+namespace p121
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            Hashtable hashtable = new Hashtable();
+
+            hashtable.Add("0555473439", "yaqub");
+
+            hashtable.Add("0555284049", "bahar");
+            
+            foreach(dynamic item in hashtable)
+            {
+                Console.WriteLine(item.Value + " " + item.Key);
+
+
+            }
+            
+        }
+    }
+}
+5.1)hastable remove method 
+using System;
+using System.CodeDom;
+using System.Collections;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Diagnostics.Eventing.Reader;
+using System.Linq;
+using System.Runtime.ExceptionServices;
+using System.Runtime.InteropServices.ComTypes;
+using System.Text;
+using System.Threading;
+using System.Threading.Tasks;
+using System.Xml.Linq;
+using System.Xml.Schema;
+
+namespace p121
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            Hashtable hashtable = new Hashtable();
+
+            hashtable.Add("0555473439", "yaqub");
+
+            hashtable.Add("0555284049", "bahar");
+            hashtable.Clear();  
+            
+            foreach(dynamic item in hashtable)
+            {
+                Console.WriteLine(item.Value + " " + item.Key);
+
+
+            }
+            
+        }
+    }
+}
