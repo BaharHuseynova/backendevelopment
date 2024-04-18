@@ -1,0 +1,65 @@
+using System;
+using System.CodeDom;
+using System.Collections;
+using System.Collections.Generic;
+using System.Collections.ObjectModel;
+using System.Data.SqlTypes;
+using System.Linq;
+using System.Net;
+using System.Net.NetworkInformation;
+using System.Runtime.InteropServices;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace p121b
+{
+    internal class Program
+    {
+
+        static void Main(string[] args)
+        {
+            Console.ForegroundColor = ConsoleColor.Blue;
+            Console.BackgroundColor = ConsoleColor.Green;
+            Console.Write("Enter first number:");
+            int x1 = Convert.ToInt32(Console.ReadLine());
+            Console.Write("Enter secomd number:");
+            int x2 = Convert.ToInt32(Console.ReadLine());
+            Console.Write("Enter  symbol + - * /:");
+            char sign = Convert.ToChar(Console.ReadLine());
+
+            switch (sign)
+            {
+                case '+':
+
+                    Console.ForegroundColor = ConsoleColor.Cyan;
+                    Console.BackgroundColor = ConsoleColor.Magenta;
+                    Console.WriteLine($"{x1} {sign} {x2} = {(x1 + x2)} ");
+                    break;
+
+
+                case '-':
+
+                    Console.ForegroundColor = ConsoleColor.Yellow;
+                    Console.BackgroundColor = ConsoleColor.DarkGreen;
+                    Console.WriteLine($"{x1} {sign} {x2} = {(x1 - x2)} ");
+                    break;
+
+                case '*':
+                    Console.ForegroundColor = ConsoleColor.Red;
+                    Console.BackgroundColor = ConsoleColor.White;
+                    Console.WriteLine($"{x1} {sign} {x2} = {(x1 * x2)} ");
+                    break;
+                case '/':
+                    Console.ForegroundColor = ConsoleColor.DarkBlue;
+                    Console.BackgroundColor = ConsoleColor.White;
+                    Console.WriteLine($"{x1} {sign} {x2} = {x1 / x2} ");
+                    break;
+                default:
+                    break;
+                    Console.ForegroundColor = ConsoleColor.DarkBlue;
+                    Console.BackgroundColor = ConsoleColor.Magenta;
+                    Console.WriteLine("There is no sign in our system");
+            }
+        }
+    }
+}

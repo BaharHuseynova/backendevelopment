@@ -1,0 +1,117 @@
+using System;
+using System.CodeDom;
+using System.Collections.Generic;
+using System.Linq;
+using System.Net;
+using System.Runtime.InteropServices;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace p121b
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            Dictionary<string, string> phoneBook = new Dictionary<string, string>();
+            while (true)
+            {
+
+
+                Console.WriteLine("Enter your choice: ");
+                Console.WriteLine("  1. Add  Contact \n  2. Delete  contact \n  3. Search  number \n  4. Display all contacts. \n  5. Exit \n  6. Update contact ");
+
+
+
+                byte selection = Convert.ToByte(Console.ReadLine());
+
+                if (selection == 1)
+                {
+                    Console.Write("Enter Name :");
+                    string Name = Console.ReadLine();
+
+                    Console.Write("Enter Number :");
+                    string Number = Console.ReadLine();
+
+                    phoneBook.Add(Name, Number);
+                    Console.WriteLine(Name + " " + "Added");
+                }
+                else if (selection == 2)
+                {
+                    Console.Write("Write Name :");
+                    string removeKey = Console.ReadLine();
+                    foreach (dynamic item in phoneBook)
+                    {
+                        if (item.Key == removeKey)
+                        {
+                            phoneBook.Remove(item.Key);
+
+                            Console.WriteLine(removeKey + " " + "Deleted");
+                            break;
+                        }
+                        else
+                        {
+                            Console.WriteLine("This number isn't exict");
+                        }
+                    }
+                }
+
+                else if (selection == 3)
+                {
+                    Console.Write("Enter Name : ");
+                    string searchName = Console.ReadLine();
+                    foreach (var item in phoneBook)
+                    {
+                        if (item.Key == searchName)
+                        {
+                            Console.WriteLine(searchName + " " + "exict");
+                        }
+                        else
+                        {
+                            Console.WriteLine("This name doesn't exist");
+                        }
+                    }
+                }
+
+                else if (selection == 4)
+                {
+                    foreach (var item in phoneBook)
+                    {
+                        Console.WriteLine(item.Key + " " + item.Value);
+
+                    }
+
+                }
+
+                else if (selection == 5)
+                {
+                    break;
+                }
+                else if (selection == 6)
+                {
+                    Console.Write("Enter Name : ");
+                    string updateName = Console.ReadLine();
+                    foreach (var item in phoneBook)
+                    {
+                        if (item.Key == updateName)
+                        {
+                            Console.Write("Enter new Name: ");
+                            string newName = Console.ReadLine();
+
+                            Console.Write("Enter new Number: ");
+                            string newNumber = Console.ReadLine();
+
+                            phoneBook[updateName] = newNumber;
+                            Console.WriteLine(updateName + " " + "Updated");
+                            break;
+                        }
+                        else
+                        {
+                            Console.WriteLine("This name doesn't exist");
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

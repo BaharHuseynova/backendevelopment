@@ -1,0 +1,63 @@
+using System;
+using System.CodeDom;
+using System.Collections;
+using System.Collections.Generic;
+using System.Collections.ObjectModel;
+using System.Data.SqlTypes;
+using System.Linq;
+using System.Net;
+using System.Net.NetworkInformation;
+using System.Runtime.CompilerServices;
+using System.Runtime.InteropServices;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace p121b
+{
+    internal class Program
+    {
+
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Enter entrance score:");
+            int entrancescore = Convert.ToInt32(Console.ReadLine());
+
+            Console.WriteLine("Enter exit score:");
+            int exitscore = Convert.ToInt32(Console.ReadLine());
+
+
+            if (entrancescore > 51 || exitscore > 51)
+            {
+                Console.WriteLine("Enter right score");
+                return;
+            }
+            int attadancescore = entrancescore + exitscore;
+            Console.WriteLine($"Attadance score : {attadancescore}");
+
+            switch (attadancescore / 10)
+                {
+                    case 9:
+                        Console.WriteLine("A");
+                        break;
+                    case 8:
+                        Console.WriteLine("B");
+                        break;
+                    case 7:
+                        Console.WriteLine("C");
+                        break;
+                    case 6:
+                        Console.WriteLine("D");
+                        break;
+                    case 5:
+                        Console.WriteLine("E");
+                        break;
+                    default:
+                        Console.ForegroundColor = ConsoleColor.Yellow;
+                        Console.BackgroundColor = ConsoleColor.Red;
+                        Console.WriteLine("THIS STUDENT IS FALLEN");
+                        break;
+
+                }
+            }
+        }
+    }

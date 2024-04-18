@@ -1,0 +1,65 @@
+1)
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApp10
+{
+    public class Program
+    {
+        public static void Main(string[] args)
+        {
+            Console.Write("Enter number:");
+            int num = Convert.ToInt32(Console.ReadLine());
+
+            Console.WriteLine(IsOdd(num));
+        }
+
+        public static bool IsOdd(int num)
+        {
+            if (num % 2 == 1)
+            {
+                return true;
+            }
+            
+            
+                return false;
+            
+        }
+    }
+}
+2)
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApp10
+{
+    public class Program
+    {
+        public static void Main(string[] args)
+        {
+            Console.Write("Enter number:");
+            int num = Convert.ToInt32(Console.ReadLine());
+
+            Console.WriteLine(IsEven(num));
+        }
+
+        public static bool IsEven(int num)
+        {
+            if (num % 2 == 0)
+            {
+                return true;
+            }
+            
+            
+                return false;
+            
+        }
+    }
+}
+3)

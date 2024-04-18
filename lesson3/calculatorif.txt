@@ -1,0 +1,41 @@
+using System;
+
+namespace Calculatoif
+{
+    public class Student
+    {
+        static void Main(string[] args)
+        {
+            Console.Write("Enter Num1:");
+            int num1 = Convert.ToInt32(Console.ReadLine());
+
+            Console.Write("Enter Num2:");
+            int num2 = Convert.ToInt32(Console.ReadLine());
+
+            Console.Write("Enter Sign:");
+            char sign = Convert.ToChar(Console.ReadLine());
+
+            if(sign == '+')
+            {
+                Console.WriteLine($"{num1}  {sign} {num2} = {num1+num2} ");
+
+            }
+            else if (sign == '-')
+            {
+                Console.WriteLine($"{num1} {sign} {num2} = {num1 - num2} ");
+            }
+            else if (sign == '*')
+            {
+                Console.WriteLine($"{num1} {sign} {num2} = {num1 * num2} ");
+            }
+            else if (sign == '/')
+            {
+                Console.WriteLine($"{num1} {sign} {num2} = {num1 / num2} ");
+            }
+            else
+            {
+                Console.WriteLine("This is no sign in our system");
+            }
+        }
+    }
+}

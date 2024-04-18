@@ -1,0 +1,117 @@
+1)calculator method
+using System;
+using System.CodeDom;
+using System.Collections;
+using System.Collections.Generic;
+using System.Collections.ObjectModel;
+using System.Linq;
+using System.Net;
+using System.Net.NetworkInformation;
+using System.Runtime.InteropServices;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace p121b
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            while (true)
+            {
+
+
+                Console.Write("Enter first number:");
+                int a = Convert.ToInt32(Console.ReadLine());
+
+                Console.Write("Enter second number:");
+                int b = Convert.ToInt32(Console.ReadLine());
+
+                Console.WriteLine("Enter symbol + - * /:");
+                char option = Convert.ToChar(Console.ReadLine());
+                Calculator(a,b,option);
+            }
+
+        }
+        public  static void Calculator (int a, int b, char option)
+        {
+            switch (option)
+            {
+                case '+':
+                    Console.WriteLine(($"{a} {option} {b} = {(a + b)}"));
+                    break;
+                case '-':
+                    Console.WriteLine($"{a} {option} {b} = {(a-b)}");
+                    break;
+                case '*':
+                    Console.WriteLine(($"{a} {option} {b} = {(a * b)}"));
+                    break;
+                case '/':
+                    Console.WriteLine(($"{a} {option} {b} = {(a / b)}"));
+                    break;
+                default:
+                    Console.WriteLine("There is no option in our system:");
+                    break;
+
+
+            }
+                
+
+        }
+    }
+}
+2)student class 
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Linq;
+using System.Net.Cache;
+using System.Security.Cryptography.X509Certificates;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApp1
+{
+    public class Student
+    {
+
+        public string Name { get; set; }
+
+
+        public string Surname { get; set; }
+
+        public byte Age { get; set; }
+
+        public static void Main(string[] args)
+        {
+
+            List<Student> students = new List<Student>();
+            while (true)
+            {
+
+                Console.Write("Name:");
+                string name = Console.ReadLine();
+
+                Console.Write("Surname:");
+                string surname = Console.ReadLine();
+
+                Console.Write("Age:");
+                byte age = Convert.ToByte(Console.ReadLine());
+
+
+                Student student = new Student();
+                student.Name = name;
+                student.Surname = surname;
+                student.Age = age;
+                students.Add(student);
+
+
+                foreach (dynamic item in students)
+                {
+                    Console.WriteLine(item.Name + " " + item.Surname + " " + item.Age);
+                }
+            }
+        }
+    }
+}
+      
